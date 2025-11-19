@@ -126,8 +126,8 @@
         /* ==== MAPA COLOMBIA CON ZONAS MEJOR AJUSTADO ==== */
         .mapa-colombia {
             width: 100%;
-            max-width: 520px;      /* más compacto para que no se vea cortado */
-            aspect-ratio: 4 / 3;   /* proporción estable */
+            max-width: 520px;
+            aspect-ratio: 4 / 3;
             border-radius: 10px;
             position: relative;
             margin: 0 auto;
@@ -137,7 +137,7 @@
         .mapa-colombia img {
             width: 100%;
             height: 100%;
-            object-fit: cover;     /* rellena el cuadro sin deformarse raro */
+            object-fit: cover;
             display: block;
         }
         .punto-alerta {
@@ -150,24 +150,64 @@
             white-space: nowrap;
             opacity: 0.95;
         }
-        /* Posiciones ajustadas para el mapa actual */
-        .p-caribe    { top: 20%; left: 42%; }  /* Costa Caribe */
-        .p-andina    { top: 38%; left: 44%; }  /* Región Andina */
-        .p-pacifica  { top: 55%; left: 27%; }  /* Región Pacífica */
-        .p-orinoquia { top: 43%; left: 67%; }  /* Orinoquía */
-        .p-amazonia  { top: 68%; left: 57%; }  /* Amazonía */
+        .p-caribe    { top: 20%; left: 42%; }
+        .p-andina    { top: 38%; left: 44%; }
+        .p-pacifica  { top: 55%; left: 27%; }
+        .p-orinoquia { top: 43%; left: 67%; }
+        .p-amazonia  { top: 68%; left: 57%; }
 
-        footer {
+        /* ==== FOOTER NUEVO CON ENLACES ÚTILES ==== */
+        .footer-top {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 30px 15px;
+            margin-top: 20px;
+        }
+        .footer-contenedor {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+        .footer-col {
+            flex: 1 1 220px;
+        }
+        .footer-col h3 {
+            margin-top: 0;
+            font-size: 16px;
+            color: #f9fafb;
+        }
+        .footer-links a {
+            display: block;
+            color: #e5e7eb;
+            text-decoration: none;
+            font-size: 14px;
+            margin-bottom: 4px;
+        }
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+        .footer-contacto p {
+            margin: 4px 0;
+            font-size: 14px;
+        }
+        .footer-bottom {
+            background: #020617;
+            color: #9ca3af;
             text-align: center;
             font-size: 12px;
-            color: #555;
-            padding: 15px 0;
+            padding: 10px 5px;
         }
+
         @media (max-width: 768px) {
             nav {
                 font-size: 14px;
             }
             .contenedor-flex {
+                flex-direction: column;
+            }
+            .footer-contenedor {
                 flex-direction: column;
             }
         }
@@ -211,7 +251,6 @@
                 <a class="boton" href="#reportar">Ir a Reportar fraude</a>
             </div>
             <div class="col-imagen">
-                <!-- Imagen 1: Prevención de fraudes en Internet -->
                 <img src="https://ecuador.unir.net/wp-content/uploads/sites/8/2025/03/Prevencion-de-Fraudes-en-Internet-Tipos-y-estrategias-para-evitarlos1.webp"
                      alt="Prevención de fraudes en Internet, tipos y estrategias para evitarlos">
             </div>
@@ -230,7 +269,6 @@
                 <div class="tarjeta">📱 Activa la verificación en dos pasos en tus cuentas importantes.</div>
             </div>
             <div class="col-imagen">
-                <!-- Imagen 2: Persona preocupada por el fraude digital -->
                 <img src="https://revistabyte.es/wp-content/uploads/2023/11/los-espanoles-cada-vez-con-mas-miedo-de-ser-victima-del-fraude-digital.jpeg"
                      alt="Persona preocupada por ser víctima de fraude digital">
             </div>
@@ -261,7 +299,6 @@
                 </div>
             </div>
             <div class="col-imagen">
-                <!-- Imagen 3: Estafas digitales y hackeo -->
                 <img src="https://cdn.aicad.es/asset/img/3/estafas-digitales-cab.png"
                      alt="Ilustración sobre estafas digitales y ciberdelincuencia">
             </div>
@@ -290,7 +327,6 @@
                 </form>
             </div>
             <div class="col-imagen">
-                <!-- Imagen 4: Persona ante fraude o estafa digital -->
                 <img src="https://palabrasclaras.mx/wp-content/uploads/2023/10/estafa-artificial-hacker.jpeg"
                      alt="Persona afectada por estafa digital y ciberdelincuencia">
             </div>
@@ -307,11 +343,9 @@
         </p>
 
         <div class="mapa-colombia">
-            <!-- Mapa de Colombia que sí carga bien -->
             <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Colombia_relief_location_map.jpg/640px-Colombia_relief_location_map.jpg" 
                  alt="Mapa de Colombia con zonas de alerta de fraude digital">
 
-            <!-- Puntos de alerta sobre el mapa (posiciones aproximadas) -->
             <span class="punto-alerta p-caribe">⚠ Costa Caribe</span>
             <span class="punto-alerta p-andina">⚠ Región Andina</span>
             <span class="punto-alerta p-pacifica">⚠ Región Pacífica</span>
@@ -362,9 +396,50 @@
 
 </main>
 
-<footer>
+<div class="footer-top">
+    <div class="footer-contenedor">
+        <div class="footer-col">
+            <h3>Enlaces útiles</h3>
+            <div class="footer-links">
+                <a href="#inicio">Inicio</a>
+                <a href="#acerca">Sobre nosotros</a>
+                <a href="#legal">Legal</a>
+                <a href="#contacto">Contáctanos</a>
+            </div>
+        </div>
+        <div class="footer-col" id="legal">
+            <h3>Legal</h3>
+            <p style="font-size:14px;">
+                Este es un prototipo académico desarrollado en el marco del curso 
+                <strong>Proyecto de Ingeniería I – UNAD</strong>. No gestiona datos reales de usuarios 
+                ni reemplaza canales oficiales de denuncia.
+            </p>
+        </div>
+        <div class="footer-col">
+            <h3>Sobre nosotros</h3>
+            <p class="footer-contacto">
+                Somos un equipo de Estudiantes de Ingeniería de la 
+                <strong>Universidad Nacional Abierta y a Distancia (UNAD)</strong>,
+                cuyo objetivo es ayudar a la comunidad más vulnerable a prevenir el robo de su información.
+            </p>
+            <p class="footer-contacto">
+                Estamos comprometidos con generar espacios de aprendizaje para la comunidad más vulnerable.
+            </p>
+        </div>
+        <div class="footer-col" id="contacto">
+            <h3>Contáctanos</h3>
+            <div class="footer-contacto">
+                <p><strong>Contacto principal:</strong></p>
+                <p>📧 cjcorderom@unadvirtual.edu.co</p>
+                <p>📱 +57 320 574 2273</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="footer-bottom">
     Prototipo “Alerta Fraude Digital” · Desarrollo académico sin fines comerciales.
-</footer>
+</div>
 
 </body>
 </html>
