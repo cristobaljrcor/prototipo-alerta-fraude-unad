@@ -123,11 +123,11 @@
             margin-right: 5px;
         }
 
-        /* ==== MAPA COLOMBIA CON ZONAS ==== */
+        /* ==== MAPA COLOMBIA CON ZONAS MEJOR AJUSTADO ==== */
         .mapa-colombia {
             width: 100%;
-            max-width: 640px;
-            height: auto;
+            max-width: 520px;      /* más compacto para que no se vea cortado */
+            aspect-ratio: 4 / 3;   /* proporción estable */
             border-radius: 10px;
             position: relative;
             margin: 0 auto;
@@ -136,6 +136,8 @@
         }
         .mapa-colombia img {
             width: 100%;
+            height: 100%;
+            object-fit: cover;     /* rellena el cuadro sin deformarse raro */
             display: block;
         }
         .punto-alerta {
@@ -146,13 +148,14 @@
             padding: 3px 6px;
             border-radius: 12px;
             white-space: nowrap;
+            opacity: 0.95;
         }
-        /* Posiciones aproximadas de las regiones sobre el mapa de Colombia */
-        .p-caribe    { top: 18%; left: 38%; }  /* Costa Caribe */
-        .p-andina    { top: 38%; left: 40%; }  /* Región Andina */
-        .p-pacifica  { top: 52%; left: 20%; }  /* Región Pacífica */
-        .p-orinoquia { top: 45%; left: 65%; }  /* Orinoquía */
-        .p-amazonia  { top: 68%; left: 55%; }  /* Amazonía */
+        /* Posiciones ajustadas para el mapa actual */
+        .p-caribe    { top: 20%; left: 42%; }  /* Costa Caribe */
+        .p-andina    { top: 38%; left: 44%; }  /* Región Andina */
+        .p-pacifica  { top: 55%; left: 27%; }  /* Región Pacífica */
+        .p-orinoquia { top: 43%; left: 67%; }  /* Orinoquía */
+        .p-amazonia  { top: 68%; left: 57%; }  /* Amazonía */
 
         footer {
             text-align: center;
@@ -304,9 +307,9 @@
         </p>
 
         <div class="mapa-colombia">
-            <!-- Mapa de Colombia con contexto de fraudes digitales (imagen inicial que me diste) -->
-            <img src="https://imagenes2.eltiempo.com/files/image_600_455/uploads/2025/03/15/67d5e73a027c3.jpeg" 
-                 alt="Mapa de Colombia y contexto de fraudes digitales">
+            <!-- Mapa de Colombia que sí carga bien -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Colombia_relief_location_map.jpg/640px-Colombia_relief_location_map.jpg" 
+                 alt="Mapa de Colombia con zonas de alerta de fraude digital">
 
             <!-- Puntos de alerta sobre el mapa (posiciones aproximadas) -->
             <span class="punto-alerta p-caribe">⚠ Costa Caribe</span>
