@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alerta Fraude Digital - Prototipo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(180deg, #e8f1ff, #f8f9ff);
+        }
+        header {
+            background: #1f4e79;
+            color: white;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+        }
+        header h1 {
+            margin: 0;
+        }
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 14px;
+        }
+        nav {
+            background: #16324f;
+            padding: 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        nav a {
+            color: white;
+            margin: 0 10px;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 6px 10px;
+            border-radius: 4px;
+        }
+        nav a:hover {
+            background: #1f4e79;
+        }
+        main {
+            max-width: 1000px;
+            margin: 20px auto;
+            padding: 0 10px 40px 10px;
+        }
+        section {
+            padding: 20px;
+            background: white;
+            margin-top: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #1f4e79;
+            margin-top: 0;
+        }
+        .boton {
+            display: inline-block;
+            padding: 10px 15px;
+            margin: 5px 5px 0 0;
+            background: #1f4e79;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .boton:hover {
+            background: #16324f;
+        }
+        .tarjeta {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 8px;
+            background: #f9fafc;
+        }
+        .contenedor-flex {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            align-items: center;
+        }
+        .col-texto {
+            flex: 1 1 260px;
+        }
+        .col-imagen {
+            flex: 1 1 260px;
+            text-align: center;
+        }
+        .col-imagen img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        form textarea, form select {
+            width: 100%;
+            max-width: 100%;
+        }
+        form button {
+            background: #1f4e79;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            padding: 8px 15px;
+            cursor: pointer;
+            margin-top: 5px;
+        }
+        form button:hover {
+            background: #16324f;
+        }
+        .badge {
+            display: inline-block;
+            padding: 3px 8px;
+            background: #e0ecff;
+            color: #16324f;
+            border-radius: 20px;
+            font-size: 11px;
+            margin-right: 5px;
+        }
+        .mapa-falso {
+            width: 100%;
+            height: 220px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, #c8e6ff, #f4f7ff);
+            position: relative;
+            overflow: hidden;
+        }
+        .punto-alerta {
+            position: absolute;
+            background: #ff9800;
+            color: white;
+            font-size: 12px;
+            padding: 3px 6px;
+            border-radius: 12px;
+        }
+        .p1 { top: 25%; left: 30%; }
+        .p2 { top: 55%; left: 60%; }
+        .p3 { top: 40%; left: 15%; }
+        footer {
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+            padding: 15px 0;
+        }
+        @media (max-width: 768px) {
+            nav {
+                font-size: 14px;
+            }
+            .contenedor-flex {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Plataforma "Alerta Fraude Digital"</h1>
+    <p>Prototipo de baja fidelidad · Proyecto de Ingeniería I – UNAD</p>
+</header>
+
+<nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#aprender">Aprender</a>
+    <a href="#simulador">Simulador</a>
+    <a href="#reportar">Reportar fraude</a>
+    <a href="#mapa">Mapa de alertas</a>
+    <a href="#acerca">Acerca del proyecto</a>
+</nav>
+
+<main>
+
+    <!-- INICIO -->
+    <section id="inicio">
+        <div class="contenedor-flex">
+            <div class="col-texto">
+                <h2>Inicio</h2>
+                <p>
+                    Bienvenido a la plataforma interactiva <strong>“Alerta Fraude Digital”</strong>. 
+                    Este prototipo muestra cómo una herramienta web puede ayudar a las comunidades
+                    a identificar y prevenir fraudes en internet, redes sociales y aplicaciones de mensajería.
+                </p>
+                <p>
+                    <span class="badge">Prevención</span>
+                    <span class="badge">Ciberseguridad</span>
+                    <span class="badge">Educación digital</span>
+                </p>
+                <a class="boton" href="#aprender">Ir a Aprender</a>
+                <a class="boton" href="#simulador">Ir al Simulador</a>
+                <a class="boton" href="#reportar">Ir a Reportar fraude</a>
+            </div>
+            <div class="col-imagen">
+                <!-- Aquí puedes cambiar la imagen por una propia -->
+                <img src="https://via.placeholder.com/400x220?text=Alerta+Fraude+Digital" alt="Ilustración alerta fraude digital">
+            </div>
+        </div>
+    </section>
+
+    <!-- APRENDER -->
+    <section id="aprender">
+        <div class="contenedor-flex">
+            <div class="col-texto">
+                <h2>Sección: Aprender</h2>
+                <p>Aquí el usuario encuentra información básica de <strong>ciberseguridad</strong> y consejos prácticos:</p>
+                <div class="tarjeta">🔒 No compartas tus contraseñas con nadie, ni siquiera por WhatsApp.</div>
+                <div class="tarjeta">📧 Verifica siempre el remitente de los correos y mensajes antes de hacer clic.</div>
+                <div class="tarjeta">🔗 No abras enlaces desconocidos o que prometan premios muy llamativos.</div>
+                <div class="tarjeta">📱 Activa la verificación en dos pasos en tus cuentas importantes.</div>
+            </div>
+            <div class="col-imagen">
+                <img src="https://via.placeholder.com/400x220?text=Aprender+Seguridad+Digital" alt="Persona aprendiendo seguridad digital">
+            </div>
+        </div>
+    </section>
+
+    <!-- SIMULADOR -->
+    <section id="simulador">
+        <h2>Sección: Simulador de fraude</h2>
+        <p>En esta sección se presentan <strong>situaciones simuladas</strong> para que el usuario decida si son seguras o un fraude.</p>
+        <div class="contenedor-flex">
+            <div class="col-texto">
+                <div class="tarjeta">
+                    <strong>Mensaje simulado:</strong><br>
+                    "🎉 ¡Ganaste un premio! Haz clic en este enlace y regístrate con tus datos bancarios para reclamarlo."<br><br>
+                    ¿Crees que este mensaje es seguro?
+                    <br><br>
+                    <a class="boton" href="javascript:void(0);" onclick="alert('Incorrecto. Este mensaje es un fraude porque te pide datos bancarios y promete un premio sospechoso.');">Es seguro</a>
+                    <a class="boton" href="javascript:void(0);" onclick="alert('Correcto. Es un fraude, nunca des tus datos bancarios por mensajes como este.');">Es un fraude</a>
+                </div>
+
+                <div class="tarjeta">
+                    <strong>Mensaje simulado:</strong><br>
+                    "BancoXYZ: Hemos detectado un intento de ingreso. Si no fuiste tú, comunícate a nuestra línea oficial o entra a la app oficial."<br><br>
+                    ¿Es más confiable este mensaje?
+                    <br><br>
+                    <a class="boton" href="javascript:void(0);" onclick="alert('Depende. Debes verificar el número oficial del banco o entrar directamente a la app, nunca desde enlaces enviados por mensajes.');">Ver explicación</a>
+                </div>
+            </div>
+            <div class="col-imagen">
+                <img src="https://via.placeholder.com/400x220?text=Simulador+de+Fraude" alt="Simulador de mensajes sospechosos">
+            </div>
+        </div>
+        <p><em>Nota: En una versión real, aquí se registrarían las respuestas del usuario para generar estadísticas de aprendizaje.</em></p>
+    </section>
+
+    <!-- REPORTAR FRAUDE -->
+    <section id="reportar">
+        <div class="contenedor-flex">
+            <div class="col-texto">
+                <h2>Sección: Reportar fraude</h2>
+                <p>En esta sección, el usuario puede reportar un intento de fraude para ayudar a otras personas de la comunidad.</p>
+                <form onsubmit="alert('Este es un prototipo. En la versión real el reporte se enviaría a una base de datos.'); return false;">
+                    <label><strong>Describe lo que ocurrió:</strong></label><br>
+                    <textarea rows="4" placeholder="Ejemplo: Me escribieron por WhatsApp diciendo que eran del banco y me pedían una clave..."></textarea><br><br>
+                    <label><strong>¿Por dónde te contactaron?</strong></label><br>
+                    <select>
+                        <option>WhatsApp</option>
+                        <option>SMS</option>
+                        <option>Correo electrónico</option>
+                        <option>Red social</option>
+                        <option>Llamada telefónica</option>
+                    </select><br><br>
+                    <button type="submit">Enviar reporte (simulado)</button>
+                </form>
+            </div>
+            <div class="col-imagen">
+                <img src="https://via.placeholder.com/400x220?text=Reportar+Fraude" alt="Persona reportando fraude digital">
+            </div>
+        </div>
+    </section>
+
+    <!-- MAPA DE ALERTAS -->
+    <section id="mapa">
+        <h2>Sección: Mapa de alertas</h2>
+        <p>
+            Aquí se muestra un mapa ilustrativo con los fraudes reportados por la comunidad. 
+            Cada punto representa una alerta registrada.
+        </p>
+        <div class="mapa-falso">
+            <span class="punto-alerta p1">⚠ Zona 1</span>
+            <span class="punto-alerta p2">⚠ Zona 2</span>
+            <span class="punto-alerta p3">⚠ Zona 3</span>
+        </div>
+        <br>
+        <div class="tarjeta">
+            🔔 <strong>Zona 1:</strong> Varios intentos de fraude por WhatsApp.<br>
+            🔔 <strong>Zona 2:</strong> Correos falsos haciéndose pasar por entidades bancarias.<br>
+            🔔 <strong>Zona 3:</strong> Mensajes de premios falsos y phishing en redes sociales.
+        </div>
+    </section>
+
+    <!-- ACERCA DEL PROYECTO -->
+    <section id="acerca">
+        <h2>Acerca del proyecto</h2>
+        <p>
+            Este prototipo de baja fidelidad hace parte del curso <strong>Proyecto de Ingeniería I</strong> 
+            de la <strong>Universidad Nacional Abierta y a Distancia – UNAD</strong>.
+        </p>
+        <p>
+            El objetivo es representar de forma visual e interactiva cómo una plataforma digital puede ayudar a:
+        </p>
+        <ul>
+            <li>Educar a las personas en prácticas básicas de ciberseguridad.</li>
+            <li>Reconocer mensajes, enlaces y llamadas sospechosas.</li>
+            <li>Registrar y compartir reportes de fraudes digitales.</li>
+            <li>Construir un mapa comunitario de alertas para la prevención.</li>
+        </ul>
+        <p>
+            Aunque este prototipo no está conectado a una base de datos real, 
+            permite visualizar el <strong>diseño del sistema</strong>, 
+            los <strong>flujos de información</strong> y la <strong>interacción del usuario</strong>,
+            cumpliendo con los lineamientos de la Etapa 4 del proyecto.
+        </p>
+    </section>
+
+</main>
+
+<footer>
+    Prototipo “Alerta Fraude Digital” · Desarrollo académico sin fines comerciales.
+</footer>
+
+</body>
+</html>
