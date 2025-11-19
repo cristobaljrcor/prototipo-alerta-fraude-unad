@@ -122,25 +122,38 @@
             font-size: 11px;
             margin-right: 5px;
         }
-        .mapa-falso {
+
+        /* ==== MAPA COLOMBIA CON ZONAS ==== */
+        .mapa-colombia {
             width: 100%;
-            height: 220px;
+            max-width: 640px;
+            height: auto;
             border-radius: 10px;
-            background: linear-gradient(135deg, #c8e6ff, #f4f7ff);
             position: relative;
+            margin: 0 auto;
             overflow: hidden;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        }
+        .mapa-colombia img {
+            width: 100%;
+            display: block;
         }
         .punto-alerta {
             position: absolute;
             background: #ff9800;
             color: white;
-            font-size: 12px;
+            font-size: 11px;
             padding: 3px 6px;
             border-radius: 12px;
+            white-space: nowrap;
         }
-        .p1 { top: 25%; left: 30%; }
-        .p2 { top: 55%; left: 60%; }
-        .p3 { top: 40%; left: 15%; }
+        /* Posiciones aproximadas de las regiones sobre el mapa de Colombia */
+        .p-caribe    { top: 18%; left: 38%; }  /* Costa Caribe */
+        .p-andina    { top: 38%; left: 40%; }  /* Región Andina */
+        .p-pacifica  { top: 52%; left: 20%; }  /* Región Pacífica */
+        .p-orinoquia { top: 45%; left: 65%; }  /* Orinoquía */
+        .p-amazonia  { top: 68%; left: 55%; }  /* Amazonía */
+
         footer {
             text-align: center;
             font-size: 12px;
@@ -195,8 +208,9 @@
                 <a class="boton" href="#reportar">Ir a Reportar fraude</a>
             </div>
             <div class="col-imagen">
-                <!-- Imagen 1 -->
-                <img src="https://picsum.photos/400/220?random=1" alt="Ilustración alerta fraude digital">
+                <!-- Imagen relacionada con seguridad en línea -->
+                <img src="https://images.pexels.com/photos/5380642/pexels-photo-5380642.jpeg"
+                     alt="Persona usando computador de forma segura">
             </div>
         </div>
     </section>
@@ -213,8 +227,9 @@
                 <div class="tarjeta">📱 Activa la verificación en dos pasos en tus cuentas importantes.</div>
             </div>
             <div class="col-imagen">
-                <!-- Imagen 2 -->
-                <img src="https://picsum.photos/400/220?random=2" alt="Persona aprendiendo seguridad digital">
+                <!-- Imagen sobre educación / aprendizaje digital -->
+                <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg"
+                     alt="Persona aprendiendo sobre seguridad digital">
             </div>
         </div>
     </section>
@@ -243,8 +258,9 @@
                 </div>
             </div>
             <div class="col-imagen">
-                <!-- Imagen 3 -->
-                <img src="https://picsum.photos/400/220?random=3" alt="Simulador de mensajes sospechosos">
+                <!-- Imagen sobre fraude digital en dispositivos -->
+                <img src="https://images.pexels.com/photos/5380648/pexels-photo-5380648.jpeg"
+                     alt="Persona revisando posibles fraudes digitales en su dispositivo">
             </div>
         </div>
         <p><em>Nota: En una versión real, aquí se registrarían las respuestas del usuario para generar estadísticas de aprendizaje.</em></p>
@@ -271,30 +287,50 @@
                 </form>
             </div>
             <div class="col-imagen">
-                <!-- Imagen 4 -->
-                <img src="https://picsum.photos/400/220?random=4" alt="Persona reportando fraude digital">
+                <!-- Imagen sobre reporte / comunicación -->
+                <img src="https://images.pexels.com/photos/1181671/pexels-photo-1181671.jpeg"
+                     alt="Persona reportando un fraude digital">
             </div>
         </div>
     </section>
 
-    <!-- MAPA DE ALERTAS -->
+    <!-- MAPA DE ALERTAS (COLOMBIA) -->
     <section id="mapa">
         <h2>Sección: Mapa de alertas</h2>
         <p>
-            Aquí se muestra un mapa ilustrativo con los fraudes reportados por la comunidad. 
-            Cada punto representa una alerta registrada.
+            Este mapa muestra de forma ilustrativa cómo podrían visualizarse los fraudes reportados 
+            en diferentes regiones de <strong>Colombia</strong>. Cada etiqueta naranja representa una zona 
+            donde se concentra un tipo específico de amenaza digital.
         </p>
-        <div class="mapa-falso">
-            <span class="punto-alerta p1">⚠ Zona 1</span>
-            <span class="punto-alerta p2">⚠ Zona 2</span>
-            <span class="punto-alerta p3">⚠ Zona 3</span>
+
+        <div class="mapa-colombia">
+            <!-- Mapa de Colombia como imagen de fondo -->
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/Colombia_relief_location_map.jpg/640px-Colombia_relief_location_map.jpg" 
+                 alt="Mapa de Colombia con zonas de alerta de fraude digital">
+
+            <!-- Puntos de alerta sobre el mapa -->
+            <span class="punto-alerta p-caribe">⚠ Costa Caribe</span>
+            <span class="punto-alerta p-andina">⚠ Región Andina</span>
+            <span class="punto-alerta p-pacifica">⚠ Región Pacífica</span>
+            <span class="punto-alerta p-orinoquia">⚠ Orinoquía</span>
+            <span class="punto-alerta p-amazonia">⚠ Amazonía</span>
         </div>
+
         <br>
+
         <div class="tarjeta">
-            🔔 <strong>Zona 1:</strong> Varios intentos de fraude por WhatsApp.<br>
-            🔔 <strong>Zona 2:</strong> Correos falsos haciéndose pasar por entidades bancarias.<br>
-            🔔 <strong>Zona 3:</strong> Mensajes de premios falsos y phishing en redes sociales.
+            🔔 <strong>Costa Caribe:</strong> Mayor presencia de mensajes falsos por redes sociales y cadenas de WhatsApp.<br>
+            🔔 <strong>Región Andina:</strong> Intentos de fraude bancario vía correos electrónicos y suplantación de identidad.<br>
+            🔔 <strong>Región Pacífica:</strong> Enlaces maliciosos compartidos en grupos comunitarios y páginas no oficiales.<br>
+            🔔 <strong>Orinoquía:</strong> Llamadas telefónicas con promesas de premios y supuestas obligaciones pendientes.<br>
+            🔔 <strong>Amazonía:</strong> Mensajes de texto (SMS) con enlaces hacia sitios fraudulentos y encuestas falsas.
         </div>
+
+        <p>
+            En una versión futura del sistema, cada punto podría generarse automáticamente a partir de los 
+            reportes reales enviados por los usuarios, permitiendo identificar las zonas del país con mayor 
+            riesgo y orientar campañas de prevención específicas.
+        </p>
     </section>
 
     <!-- ACERCA DEL PROYECTO -->
@@ -329,5 +365,3 @@
 
 </body>
 </html>
-
-
